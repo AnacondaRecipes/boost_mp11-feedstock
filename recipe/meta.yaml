@@ -1,6 +1,6 @@
 {% set name = "boost_mp11" %}
 {% set version = "1.79.0" %}
-{% set sha256 = d3f8ef486f2001c24eb0bc766b838fcce65dbb4edd099f136bf1ac4b51469f7c %}
+{% set sha256 = "d3f8ef486f2001c24eb0bc766b838fcce65dbb4edd099f136bf1ac4b51469f7c" %}
 
 
 package:
@@ -34,7 +34,7 @@ about:
   summary: C++11 metaprogramming library
   license: BSL-1.0
   license_file: LICENSE_1_0.txt
-  license_family: Boost
+  license_family: Other
   description: |
     Mp11 is a C++11 metaprogramming library based on template aliases and
     variadic templates. It implements the approach outlined in the article
