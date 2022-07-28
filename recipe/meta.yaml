@@ -1,5 +1,6 @@
 {% set name = "boost_mp11" %}
 {% set version = "1.79.0" %}
+{% set sha256 = "d3f8ef486f2001c24eb0bc766b838fcce65dbb4edd099f136bf1ac4b51469f7c" %}
 
 
 package:
@@ -8,10 +9,11 @@ package:
 
 source:
   url: https://github.com/boostorg/mp11/archive/refs/tags/boost-{{ version }}.tar.gz
-  sha256: d3f8ef486f2001c24eb0bc766b838fcce65dbb4edd099f136bf1ac4b51469f7c
+  sha256: {{ sha256 }}
 
 build:
   number: 0
+  skip: true  # [s390x or ppc64le]
 
 requirements:
   build:
@@ -33,6 +35,14 @@ about:
   summary: C++11 metaprogramming library
   license: BSL-1.0
   license_file: LICENSE_1_0.txt
+  license_family: Other
+  description: |
+    Mp11 is a C++11 metaprogramming library based on template aliases and
+    variadic templates. It implements the approach outlined in the article
+    "Simple C++11 metaprogramming" and its sequel.
+  doc_url: https://www.boost.org/doc/libs/1_79_0/libs/mp11/doc/html/simple_cxx11_metaprogramming.html
+  doc_source_url: https://github.com/boostorg/mp11/tree/develop/doc
+  dev_url: https://github.com/boostorg/mp11
 
 extra:
   recipe-maintainers:
